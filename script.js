@@ -29,3 +29,7 @@ calculator.addEventListener("click", function (el) {
         displayRead.value = currentContent.substring(0, currentContent.length - 1)
     }
 })
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("/sw.js")
+    .then(() => console.log("SW Registered"));
+}
